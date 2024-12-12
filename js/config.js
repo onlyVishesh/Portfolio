@@ -1,15 +1,17 @@
 export const statsData = [
   { totalNo: "400+", catagories: "Total Commits" },
-  { totalNo: "5+", catagories: "Languages" },
+  { totalNo: "7+", catagories: "Languages" },
   { totalNo: "1", catagories: "Internship" },
   { totalNo: "20+", catagories: "projects" },
 ];
 
 export const skillData = [
-  { icon: "react", language: "React", percentage: "40%" },
-  { icon: "js", language: "Javascrip", percentage: "80%" },
+  { icon: "node", language: "NodeJs", percentage: "60%" },
+  { icon: "react", language: "React", percentage: "80%" },
+  { icon: "js", language: "Javascript", percentage: "90%" },
   { icon: "python", language: "Python", percentage: "80%" },
-  { icon: "phoenix-framework", language: "SQL(DataBase)", percentage: "50%" },
+  { icon: "envira", language: "MongoDB(DataBase)", percentage: "60%" },
+  { icon: "phoenix-framework", language: "SQL(DataBase)", percentage: "70%" },
   { icon: "html5", language: "HTML5", percentage: "100%" },
   { icon: "css3-alt", language: "CSS", percentage: "100%" },
 ];
@@ -43,9 +45,45 @@ export const timelineData = [
 
 export const projectData = [
   {
+    imageURL: "SnapStyle.png",
+    name: "SnapStyle Website",
+    website: "https://snap-style.vercel.app/",
+    github: "https://github.com/onlyVishesh/SnapStyle",
+  },
+  {
+    imageURL: "TerrainTracker.png",
+    name: "TerrainTracker Website",
+    website: "https://terrain-tracker.vercel.app/",
+    github: "https://github.com/onlyVishesh/TerrainTracker",
+  },
+  {
+    imageURL: "coinfinder.png",
+    name: "CoinFinder Website",
+    website: "https://coin-finder-alpha.vercel.app/",
+    github: "https://github.com/onlyVishesh/CoinFinder",
+  },
+  {
+    imageURL: "StreamSphere.png",
+    name: "StreamSphere Website",
+    website: "https://stream-sphere-five.vercel.app/",
+    github: "https://github.com/onlyVishesh/StreamSphere",
+  },
+  {
+    imageURL: "Tastebit-Express.png",
+    name: "Tastebit Express Website",
+    website: "https://tastebit-express.vercel.app/",
+    github: "https://github.com/onlyVishesh/TasteBit-Express",
+  },
+  {
+    imageURL: "arcade.png",
+    name: "arcade Website",
+    website: "https://arcade-pink.vercel.app/",
+    github: "https://github.com/onlyVishesh/ARCADE",
+  },
+  {
     imageURL: "ambuvians.png",
     name: "Ambuvians Website",
-    website: "https://ambuvians.vercel.app/",
+    website: "https://ambuvians.in/",
     github: "https://github.com/onlyVishesh/ambuvians",
   },
   {
@@ -60,22 +98,22 @@ export const projectData = [
     website: "https://diamond-clicker-game.vercel.app/",
     github: "https://github.com/onlyVishesh/Diamond-Clicker-Game",
   },
-  {
-    imageURL: "meetClone.png",
-    name: "Meet Clone",
-    website: "https://meet-clone-five.vercel.app/",
-    github: "https://github.com/onlyVishesh/Meet-Clone",
-  },
-  {
-    imageURL: "navbar.png",
-    name: "Navigation bars",
-    website: "https://navbars-zeta.vercel.app/",
-    github: "https://github.com/onlyVishesh/Navbars",
-  },
-  {
-    imageURL: "newsApp.png",
-    name: "News App",
-    website: "https://newspress-zeta.vercel.app/",
-    github: "https://github.com/onlyVishesh/NewsPress",
-  },
+  // {
+  //   imageURL: "meetClone.png",
+  //   name: "Meet Clone",
+  //   website: "https://meet-clone-five.vercel.app/",
+  //   github: "https://github.com/onlyVishesh/Meet-Clone",
+  // },
+  // {
+  //   imageURL: "navbar.png",
+  //   name: "Navigation bars",
+  //   website: "https://navbars-zeta.vercel.app/",
+  //   github: "https://github.com/onlyVishesh/Navbars",
+  // },
+  // {
+  //   imageURL: "newsApp.png",
+  //   name: "News App",
+  //   website: "https://newspress-zeta.vercel.app/",
+  //   github: "https://github.com/onlyVishesh/NewsPress",
+  // },
 ];
