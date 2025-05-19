@@ -8,7 +8,7 @@ import { BiLogoGithub } from "react-icons/bi";
 export default function Footer() {
   return (
     <UnmountStudio>
-      <footer className="border-t dark:border-zinc-800 border-zinc-100 mt-44 lg:min-h-[250px] min-h-full relative">
+      <footer className="border-t dark:border-zinc-800 border-zinc-100 mt-20 min-h-full relative">
         <div className="max-w-7xl mx-auto flex md:flex-row flex-col md:items-start md:justify-between gap-y-4 md:px-16 px-6 py-16 justify-center items-center">
           <div className="flex md:flex-row flex-col items-center gap-x-2">
             <h3 className="font-inter">Built with:</h3>

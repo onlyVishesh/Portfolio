@@ -1,5 +1,6 @@
 import { BiLogoGithub, BiLogoLinkedinSquare } from "react-icons/bi";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { IoLogoMedium } from "react-icons/io5";
 
 export const socialLinks = [
   {
@@ -19,8 +20,15 @@ export const socialLinks = [
   {
     id: 3,
     name: "Linkedin",
-    url: "https://www.linkedin.com/in/vishesh-%E2%80%8E-48b1b8257 ",
+    url: "https://www.linkedin.com/in/vishesh-%E2%80%8E-48b1b8257",
     icon: BiLogoLinkedinSquare,
+    status: "social",
+  },
+  {
+    id: 4,
+    name: "Mediun",
+    url: "https://medium.com/@onlyVishesh",
+    icon: IoLogoMedium,
     status: "social",
   },
 ];
