@@ -17,9 +17,8 @@ export const skillsData = [
   "MaterialUI",
   "Nginx",
   "Strapi",
-  "Node JS",
+  // "Node JS",
   "Markdown",
-  "Ubuntu",
   "Java",
 ];
 

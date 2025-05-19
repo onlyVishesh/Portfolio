@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <UnmountStudio>
       <footer className="border-t dark:border-zinc-800 border-zinc-100 mt-44 lg:min-h-[250px] min-h-full relative">
-        <div className="max-w-7xl mx-auto flex lg:flex-row flex-col items-start lg:justify-between justify-center gap-y-4 md:px-16 px-6 py-16">
+        <div className="max-w-7xl mx-auto flex md:flex-row flex-col md:items-start md:justify-between gap-y-4 md:px-16 px-6 py-16 justify-center items-center">
           <div className="flex md:flex-row flex-col items-center gap-x-2">
             <h3 className="font-inter">Built with:</h3>
             <ul className="flex items-center gap-x-2 text-sm dark:text-zinc-600 text-zinc-400 md:mt-0 mt-3">
@@ -64,15 +64,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex flex-col lg:items-end items-center lg:text-start text-center">
+          <div className="flex flex-col lg:items-end items-center lg:text-start text-center ">
             <a
               className="flex items-center justify-center gap-x-2 dark:bg-primary-bg bg-zinc-100 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 rounded-md py-2 px-4 text-center mb-3    font-bold tracking-tight"
               href="https://github.com/onlyVishesh"
               target="_blank"
               rel="noreferrer noopener"
             >
-              <BiLogoGithub className="w-6 h-6"/>
-               <em className="text-primary-color not-italic">onlyVishesh</em>
+              <BiLogoGithub className="w-6 h-6" />
+              <em className="text-primary-color not-italic">onlyVishesh</em>
             </a>
 
             <small className="text-zinc-500">
