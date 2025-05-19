@@ -1,6 +1,8 @@
 import { sanityFetch } from "@/lib/sanity.client";
 import { profileQuery } from "@/lib/sanity.query";
 import type { ProfileType } from "@/types";
+import { Metadata } from "next";
+import Link from "next/link";
 import { Slide } from "./animation/Slide";
 import HeroSvg from "./assets/icons/HeroSvg";
 import ContributionGraph from "./components/pages/GithubCalendarComponent";
@@ -8,7 +10,21 @@ import Job from "./components/pages/Job";
 import SkillsComponent from "./components/pages/SkillsComponent";
 import Social from "./components/shared/Social";
 import Project from "./projects/page";
-import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "onlyVishesh Portfolio Website",
+  metadataBase: new URL("https://onlyvishesh.vercel.app"),
+  description:
+    "This is my portfolio website that contains my projects, skills, and experiences",
+  openGraph: {
+    title: "onlyVishesh Portfolio Website",
+    url: "https://onlyvishesh.vercel.app",
+    description:
+      "This is my portfolio website that contains my projects, skills, and experiences",
+    images:
+      "https://res.cloudinary.com/dklos8vki/image/upload/v1747638225/OnlyVishesh_zngciq.pn",
+  },
+};
 
 export default async function Home() {
   const profile: ProfileType = await sanityFetch({
@@ -28,12 +44,13 @@ export default async function Home() {
               {profile?.shortBio ?? "Short bio description"}
             </p>
           </Slide>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center flex-col md:flex-row pb-10 md:pb-0 ">
             <Slide delay={0.1}>
               <Social type="social" />
             </Slide>
             <Slide delay={0.1}>
-              <Link href="/about"
+              <Link
+                href="/about"
                 className={`rounded-lg text-center px-4 py-2 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 duration-100 text-sm font-medium dark:bg-secondary-color bg-secondary-color dark:hover:border-transparent dark:text-zinc-800 text-white hover:border-transparent"
                 `}
               >
