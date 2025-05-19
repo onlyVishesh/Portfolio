@@ -1,5 +1,3 @@
-import Buymeacoffee from "@/app/components/shared/Buymeacoffee";
-import Comments from "@/app/components/shared/Comments";
 import PageHeading from "@/app/components/shared/PageHeading";
 import { readTime } from "@/app/utils/readTime";
 import { sanityFetch } from "@/lib/sanity.client";
@@ -219,16 +217,6 @@ export default async function Post({ params }: Props) {
           </aside>
         </Slide>
       </article>
-
-      <section
-        id="comments"
-        className="max-w-3xl mt-10 lg:border-t dark:border-zinc-800 border-zinc-200 lg:py-10 pt-0"
-      >
-        <h3 className="lg:text-4xl text-3xl font-semibold tracking-tight mb-8">
-          Comments
-        </h3>
-        <Comments />
-      </section>
     </main>
   );
 }

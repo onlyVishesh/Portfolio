@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
                 <div className="flex flex-col items-center justify-center gap-3 p-6">
                   <div className="h-8 sm:h-10">
                     <Image
-                      src={skillsImage(skill)?.src ?? "/default.png"}
+                      src={skillsImage(skill) ?? "/default.png"}
                       alt={skill}
                       width={40}
                       height={40}

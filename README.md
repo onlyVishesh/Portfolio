@@ -1,54 +1,136 @@
-<h1 align="center">Project Name - Portfolio Website</h1>
+<div align="center">
+<a href="https://onlyVishesh"><img src="./public/logo.png" width="60px"></a>
+</div>
 
-<!-- ABOUT THE PROJECT -->
+<div align="center">
+<h1>onlyVishesh</h1>
+<p>My personal portfolio website</p>
+</div>
 
-## About The Project
-Welcome to the repository for my personal portfolio website! This website serves as a showcase of my skills, projects, and experiences. Feel free to explore the live website and check out the demo video to get a glimpse of the features and design.
+# Tech Stack
 
-## Table of Contents
+- [NextJS][nextjs] - UI framework
+- [Vercel][vercel] - Hosting and Deployment
+- [Sanity.io][sanity]: Headless CMS and Content Lake
+- [TailwindCSS][tailwind] / CSS - Styling and UI
+- [Umami][umami]: Analytics
+- [Next Themes][nexttheme]: Color Theme
+- [React Refractor][reactrefractor]: Syntax Highlighting
 
-- [About The Project](#about-the-project)
-- [Table of Contents](#table-of-contents)
-- [Demo Video](#demo-video)
-- [Live Website](#live-website)
-- [Description](#description)
-- [Technologies Used](#technologies-used)
-- [What I've Learned](#what-ive-learned)
-- [Contributing](#contributing)
+## Project Overview
 
-## Demo Video
+| [Site][site]          | [Studio][studio]                 |
+| --------------------- | -------------------------------- |
+| ![Site][site-preview] | ![Sanity Studio][studio-preview] |
 
-Watch the demo video to see the portfolio website in action: 
+## Run Project Locally
 
-https://github.com/onlyVishesh/Portfolio/assets/121187728/419184a2-d5ab-440e-999e-19e04e7788c1
+Follow this guide to get this site runnning locally:
 
-## Live Website
+### Clone Repository
 
-Visit the live website to explore my portfolio: [Website](https://portfolio-onlyvishesh.vercel.app)
+```js
+git clone https://github.com/Evavic44/onlyVishesh.git
 
-## Description
+cd onlyVishesh
 
-This portfolio website is designed to showcase my skills, projects, and experiences in a visually appealing and user-friendly manner. It provides an overview of my background, a portfolio section featuring various projects, and a contact form for easy communication.
+npm install
+```
 
-## Technologies Used
+- Rename [`.env.example`][env-example] to `.env.local`
 
-The website is built using the following technologies:
+### Get Env variables
 
--   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
--   ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
--   ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+The minimal `env` variables required to boot this project locally includes:
 
-## What I've Learned
+- `Project Id`
+- `Dataset`
+- `API Version`
+- `Access Token`
 
-While working on this project, I have gained experience in:
+These variables come from Sanity. To get them, you need to setup your own Sanity instance. Follow the steps below to do this:
 
-- Creating responsive and aesthetically pleasing web pages using HTML5 and CSS3.
-- Implementing interactive features and animations using JavaScript.
-- Incorporating a map component to display location or project-related information.
-- Enhancing user experience through thoughtful design and navigation.
+### Create a new sanity project
 
-## Contributing
+Run the command below in a terminal to create a new Sanity project:
 
-If you find any issues or have suggestions for improvement, feel free to open an issue or create a pull request. Contributions are welcome!
+```js
+npm create sanity@latest -- --template clean --create-project "John Doe" --dataset production
+```
 
-Thank you for visiting my portfolio repository! If you have any questions or feedback, feel free to reach out. Happy coding!
+- **Create an account**: If you already have a Sanity account, this will automatically connect to it, if not, select a login provider from the list of options, hit `Enter` and follow the prompt to create one.
+- **Choose an Output path**: Hit the `Enter` key to select the default path.
+- Install the dependencies with your preferred package manager
+
+Once completed open up the studio directory.
+
+```js
+cd john-doe
+
+code .
+```
+
+- Navigate to the `sanity.config.ts` file in the root directory and copy the `projectId`. Now you can close the studio file.
+
+### Update Env Variables
+
+Open up the cloned repository and do the following:
+
+- Set `NEXT_PUBLIC_SANITY_PROJECT_ID` to the project id you copied earlier
+- Set `NEXT_PUBLIC_SANITY_DATASET` to `production` or the dataset name you used.
+- Set `NEXT_PUBLIC_SANITY_API_VERSION` to your current date in **YYYY-MM-DD** format or leave as is
+- If you want to use an access token, visit [sanity.io/manage][sanity-manage] > **project name** > **API** > **Token** to create one. Once generated, copy the token and set it to `NEXT_PUBLIC_SANITY_ACCESS_TOKEN`.
+
+> [!Warning]
+> If you don't want to use a token, comment it out in the [env.api.ts][env-api] file or else it will throw errors.
+
+- Now run `npm run dev` and you can visit [http://localhost:3000][localhost] to see the project live.
+
+By default the UI will be blank. To start adding data to the site, visit your studio at [http://localhost:3000/studio][localhost-studio] to create your own documents.
+
+If you expereinced any issues or enquiries, please raise an issue to discuss it.
+
+## Additional Information
+
+Need more guidiance, check out this [tutorial][sanity-guide] that provides a step-by-step guide to setting up Sanity studio for your portfolio site.
+
+## Build
+
+```bash
+npm run build
+```
+
+### Important files and folders
+
+| File(s)                                        | Description                                     |
+| ---------------------------------------------- | ----------------------------------------------- |
+| [`sanity.config.ts`](sanity.config.ts)         | Config file for Sanity Studio                   |
+| [`sanity.client.ts`](lib/sanity.client.ts)     | Config file for Sanity CLI                      |
+| [`studio`](./app/studio/[[...index]]/page.tsx) | Where Sanity Studio is mounted                  |
+| [`schemas`](./schemas)                         | Where Sanity Studio gets its content types from |
+| [`sanity.query.ts`](./lib/sanity.query.ts)     | Groq query for Sanity Schema data               |
+
+## License & Usage
+
+This portfolio is MIT-licensed so you are free to use it as an inspiration or you can just copy the whole thing (excluding my personal content of course), I don't really mind. Just make sure you link back to [onlyVishesh][site] on the footer section as attribution to the original source.
+
+<!-- Link Refs -->
+
+[nextjs]: https://nextjs.org
+[vercel]: https://vercel.com
+[sanity]: https://sanity.io
+[tailwind]: https://tailwindcss.com
+[umami]: https://umami.is
+[planetscale]: https://planetscale.com/
+[nexttheme]: https://github.com/pacocoursey/next-themes
+[reactrefractor]: https://github.com/rexxars/react-refractor
+[site]: https://onlyVishesh
+[studio]: https://onlyVishesh/studio
+[studio-preview]: https://github.com/Evavic44/onlyVishesh/assets/62628408/a2574479-a352-4437-ba67-14bd976e48eb
+[site-preview]: https://github.com/Evavic44/onlyVishesh/assets/62628408/e84ac72f-1ba1-4c46-bfc0-2512ffa0e5fa
+[env-example]: https://github.com/Evavic44/onlyVishesh/blob/main/.env.example
+[localhost]: http://localhost:3000
+[localhost-studio]: http://localhost:3000/studio
+[env-api]: https://github.com/Evavic44/onlyvishesh.vercel.app/blob/main/lib/env.api.ts
+[sanity-manage]: https://sanity.io/manage
+[sanity-guide]: https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-sanity-and-nextjs
