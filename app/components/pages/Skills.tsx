@@ -28,7 +28,7 @@ const Skills: React.FC = () => {
               className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
               key={id}
             >
-              <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#36AFA9] shadow-none shadow-gray-50 group-hover:border-green-500 transition-all duration-500">
+              <div className="h-full w-full rounded-lg border dark:border-[#1f223c] dark:bg-[#b5b5b5] dark:shadow-gray-50 dark:group-hover:border-gray-500 border-[#8e8e8e] bg-[#d4d4d4] shadow-gray-50 group-hover:border-gray-500transition-all duration-500 shadow-none">
                 <div className="flex -translate-y-[1px] justify-center"></div>
                 <div className="flex flex-col items-center justify-center gap-3 p-6">
                   <div className="h-8 sm:h-10">
@@ -40,10 +40,12 @@ const Skills: React.FC = () => {
                       className="h-full w-auto rounded-lg "
                     />
                   </div>
-                  <p className="text-white text-sm sm:text-lg">{skill}</p>
+                  <p className="text-black text-sm sm:text-lg font-semibold">
+                    {skill}
+                  </p>
                 </div>
                 <div className="mx-auto w-3/4">
-                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-green-500 to-transparent" />
+                  <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-gray-900 to-transparent" />
                 </div>
               </div>
             </div>
