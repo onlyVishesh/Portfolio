@@ -30,9 +30,9 @@ Follow this guide to get this site runnning locally:
 ### Clone Repository
 
 ```js
-git clone https://github.com/Evavic44/onlyVishesh.git
+git clone https://github.com/onlyVishesh/Portfolio.git
 
-cd onlyVishesh
+cd Portfolio
 
 npm install
 ```
@@ -55,7 +55,7 @@ These variables come from Sanity. To get them, you need to setup your own Sanity
 Run the command below in a terminal to create a new Sanity project:
 
 ```js
-npm create sanity@latest -- --template clean --create-project "John Doe" --dataset production
+npm create sanity@latest -- --template clean --create-project "onlyVishesh" --dataset production
 ```
 
 - **Create an account**: If you already have a Sanity account, this will automatically connect to it, if not, select a login provider from the list of options, hit `Enter` and follow the prompt to create one.
@@ -65,7 +65,7 @@ npm create sanity@latest -- --template clean --create-project "John Doe" --datas
 Once completed open up the studio directory.
 
 ```js
-cd john-doe
+cd onlyVishesh
 
 code .
 ```
@@ -124,13 +124,12 @@ This portfolio is MIT-licensed so you are free to use it as an inspiration or yo
 [planetscale]: https://planetscale.com/
 [nexttheme]: https://github.com/pacocoursey/next-themes
 [reactrefractor]: https://github.com/rexxars/react-refractor
-[site]: https://onlyVishesh
+[site]: https://onlyVishesh.vercel.app
 [studio]: https://onlyVishesh/studio
 [studio-preview]: https://github.com/Evavic44/onlyVishesh/assets/62628408/a2574479-a352-4437-ba67-14bd976e48eb
-[site-preview]: https://github.com/Evavic44/onlyVishesh/assets/62628408/e84ac72f-1ba1-4c46-bfc0-2512ffa0e5fa
-[env-example]: https://github.com/Evavic44/onlyVishesh/blob/main/.env.example
+[env-example]: https://github.com/onlyVishesh/portfilio/blob/main/.env.example
 [localhost]: http://localhost:3000
 [localhost-studio]: http://localhost:3000/studio
-[env-api]: https://github.com/Evavic44/onlyvishesh.vercel.app/blob/main/lib/env.api.ts
+[env-api]: https://github.com/onlyVishesh/portfilio/blob/main/lib/env.api.ts
 [sanity-manage]: https://sanity.io/manage
 [sanity-guide]: https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-sanity-and-nextjs

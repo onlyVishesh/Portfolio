@@ -12,7 +12,7 @@ import Social from "./components/shared/Social";
 import Project from "./projects/page";
 
 export const metadata: Metadata = {
-  title: "onlyVishesh Portfolio Website",
+  title: "onlyVishesh | Portfolio Website",
   metadataBase: new URL("https://onlyvishesh.vercel.app"),
   description:
     "This is my portfolio website that contains my projects, skills, and experiences",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description:
       "This is my portfolio website that contains my projects, skills, and experiences",
     images:
-      "https://res.cloudinary.com/dklos8vki/image/upload/v1747638225/OnlyVishesh_zngciq.pn",
+      "https://res.cloudinary.com/dklos8vki/image/upload/v1747638225/OnlyVishesh_zngciq.png",
   },
 };
 

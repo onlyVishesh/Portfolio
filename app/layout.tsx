@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} dark:bg-zinc-900 bg-white dark:text-white text-zinc-700`}
+        className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} dark:bg-[#090909] bg-white dark:text-white text-zinc-700`}
       >
         <Providers>
           <Navbar />
