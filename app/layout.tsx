@@ -6,6 +6,7 @@ import { gitlabmono, incognito } from "./assets/font/font";
 import Footer from "./components/global/Footer";
 import Navbar from "./components/global/Navbar";
 import { Providers } from "./providers";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -57,6 +58,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <Analytics />
         </Providers>
       </body>
       <Script
